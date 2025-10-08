@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ========== Meta Basics ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Living Well Holistics | Muscle Response Testing & Holistic Wellness in Central Florida</title>
+  <meta name="description"
+    content="Living Well Holistics helps families in Central Florida make confident wellness decisions with gentle Muscle Response Testing, non-diagnostic food sensitivity screening, biofeedback scans, and faith-based emotional release. Education-forward, family-friendly, and realistic support." />
+  <meta name="author" content="Living Well Holistics" />
+  <link rel="canonical" href="https://livingwellwithjanelle.com/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <!-- ========== Open Graph / Twitter ========== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Living Well Holistics" />
+  <meta property="og:title" content="Living Well Holistics | Gentle Muscle Testing & Holistic Support" />
+  <meta property="og:description"
+    content="Simple, realistic, and faith-informed wellness support for families in Central Florida. Learn what your body is saying—without guesswork." />
+  <meta property="og:url" content="https://livingwellwithjanelle.com/" />
+  <meta property="og:image" content="https://livingwellwithjanelle.com/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ========== Tailwind via CDN ========== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ========== Fonts ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- ========== Brand Styles (no @apply) ========== -->
+  <style>
+    :root {
+      --mint: #c6e2dc;
+      /* soft mint */
+      --sand: #e3d3bc;
+      /* warm sand */
+      --ink: #1f2937;
+      /* gray-800 */
+      --ink-2: #374151;
+      /* gray-700 */
+      --soft: #f8fafc;
+      /* slate-50 */
+      --ring: #93c5b7;
+      /* mint-ish focus ring */
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.25rem;
+      font-weight: 600;
+      line-height: 1;
+      transition: filter .2s ease, box-shadow .2s ease;
+      box-shadow: 0 1px 2px rgb(16 24 40 / 6%);
+    }
+
+    .btn-primary {
+      background: var(--mint);
+      color: var(--ink);
+      border: 1px solid transparent;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.96);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--ink);
+      border: 1px solid var(--mint);
+    }
+
+    .btn-outline:hover {
+      background: #ecf6f3;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 0.375rem 0.75rem;
+      background: #ecf6f3;
+      color: var(--ink);
+    }
+
+    .card {
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      background: rgba(255, 255, 255, .85);
+      backdrop-filter: saturate(180%) blur(4px);
+    }
+
+    .section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width:768px) {
+      .section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700;
+      font-size: .85rem;
+      color: var(--ink-2);
+    }
+
+    /* a11y focus */
+    :is(a, button, input, select, textarea, summary):focus {
+      outline: 3px solid var(--ring);
+      outline-offset: 2px;
+      border-radius: 0.5rem;
+    }
+
+    html,
+    body {
+      font-family: "Lato", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+        Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+
+  <!-- ========== Structured Data (Services + FAQ) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://livingwellwithjanelle.com/#org",
+        "name":"Living Well Holistics",
+        "url":"https://livingwellwithjanelle.com/",
+        "logo":"https://livingwellwithjanelle.com/logo.png",
+        "sameAs":[]
+      },
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://livingwellwithjanelle.com/#lb",
+        "name":"Living Well Holistics",
+        "image":"https://livingwellwithjanelle.com/cover.jpg",
+        "url":"https://livingwellwithjanelle.com/",
+        "telephone":"+1-555-555-5555",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Central Florida",
+          "addressRegion":"FL",
+          "addressCountry":"US"
+        },
+        "areaServed":[
+          {"@type":"Place","name":"Oviedo"},
+          {"@type":"Place","name":"Orlando"},
+          {"@type":"Place","name":"Sanford"},
+          {"@type":"Place","name":"Winter Springs"}
+        ],
+        "priceRange":"$$",
+        "parentOrganization":{"@id":"https://livingwellwithjanelle.com/#org"}
+      },
+      {
+        "@type":"Service",
+        "@id":"https://livingwellwithjanelle.com/#service-muscle-testing",
+        "name":"Muscle Response Testing (Non-Diagnostic)",
+        "serviceType":"Holistic wellness assessment",
+        "provider":{"@id":"https://livingwellwithjanelle.com/#lb"},
+        "areaServed":["Oviedo","Orlando","Sanford","Winter Springs","Central Florida"],
+        "description":"A gentle, hands-on way to observe how the nervous system responds to stimuli. Used to inform wellness choices. Not a medical diagnosis or treatment."
+      },
+      {
+        "@type":"Service",
+        "@id":"https://livingwellwithjanelle.com/#service-food",
+        "name":"Food Sensitivity Screening (Non-Allergy)",
+        "serviceType":"Holistic nutrition support",
+        "provider":{"@id":"https://livingwellwithjanelle.com/#lb"},
+        "areaServed":["Oviedo","Orlando","Sanford","Winter Springs","Central Florida"],
+        "description":"Screens for potential reactivity patterns to foods to guide short-term avoidance and reintroduction strategies. Not an allergy test."
+      },
+      {
+        "@type":"Service",
+        "@id":"https://livingwellwithjanelle.com/#service-biofeedback",
+        "name":"Biofeedback Scan (Zyto Balance)",
+        "serviceType":"Biofeedback",
+        "provider":{"@id":"https://livingwellwithjanelle.com/#lb"},
+        "areaServed":["Oviedo","Orlando","Sanford","Winter Springs","Central Florida"],
+        "description":"Non-invasive scan that highlights potential areas of energetic stress and possible wellness support options. Educational use only."
+      },
+      {
+        "@type":"Service",
+        "@id":"https://livingwellwithjanelle.com/#service-emotions",
+        "name":"Faith-Based Emotional Release",
+        "serviceType":"Emotional wellness support",
+        "provider":{"@id":"https://livingwellwithjanelle.com/#lb"},
+        "areaServed":["Oviedo","Orlando","Sanford","Winter Springs","Central Florida"],
+        "description":"A gentle, prayerful process to help the body let go of stored stress patterns. Complements, not replaces, professional care."
+      },
+      {
+  "@type": "FAQPage",
+  "@id": "https://livingwellwithjanelle.com/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Living Well Holistics provides education-based wellness services that are not billed to insurance, and reimbursement is not available. Many families use an HSA/FSA card for session costs. We keep labs optional and recommend only a few targeted supports at a time to manage expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer virtual sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select services are available virtually via Zoom or phone for education and coaching. Hands-on services are offered in person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We primarily serve moms and families seeking gentle, realistic steps for goals like energy, digestion, skin, sleep, focus, and stress resilience. We do not diagnose or treat conditions; our focus is education and practical support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you prescribe medications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We do not diagnose conditions or prescribe pharmaceuticals. Our suggestions focus on nutrition, lifestyle, and select nutraceuticals or gentle practices. Clients should consult licensed providers for medical concerns and prescriptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your plans one-size-fits-all?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Each plan is tailored. We move in phases and address priorities in the order your body shows, with simple steps that fit real family life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What products do you recommend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We keep supplements minimal and intentional, favoring quality options that fit your needs and budget. Purchases are never required, and we can review what you already have for education-only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you see children? What about pregnancy or breastfeeding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many families bring their children. For pregnancy or breastfeeding, we focus on gentle lifestyle support and education, and we avoid introducing new supplements unless approved by your licensed provider. Always follow your provider’s guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I’m very sensitive—can you still help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We regularly work with highly sensitive clients. We start small, reduce stressors, and pace changes to support a calmer response."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean to open drainage and detox pathways?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before adding supports, we focus on basics—bowel regularity, hydration, gentle movement, and habits that help the body process everyday load. This often reduces strong reactions to change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you review lab work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do not order or interpret labs medically. If you bring recent labs from your provider, we can review them for education and to help you ask informed questions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I’ve tried many things without success—is there hope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our approach is gentle and step-by-step, focused on what your body is currently showing. The goal is clarity and confidence—not perfection."
+      }
+    }
+  ]
+}
+
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-[var(--soft)] text-[var(--ink)]">
+  <!-- ========== Header ========== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logo.png" alt="Living Well Holistics" class="h-16 w-16 rounded-full" />
+          <span class="font-semibold">Living Well Holistics</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#services" class="hover:opacity-80">Services</a>
+          <a href="#approach" class="hover:opacity-80">Approach</a>
+          <a href="#about" class="hover:opacity-80">About</a>
+          <a href="#faq" class="hover:opacity-80">FAQ</a>
+          <a href="#contact" class="hover:opacity-80">Contact</a>
+          <a href="#booking" class="btn btn-primary">Schedule a Session</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg border" aria-label="Open menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="#services" class="py-1">Services</a>
+        <a href="#approach" class="py-1">Approach</a>
+        <a href="#about" class="py-1">About</a>
+        <a href="#faq" class="py-1">FAQ</a>
+        <a href="#contact" class="py-1">Contact</a>
+        <a href="#booking" class="btn btn-primary w-full">Schedule a Session</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="relative overflow-hidden">
+    <!-- Background layers -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+      <div class="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center bg-fixed opacity-30"></div>
+      <div class="h-full w-full bg-gradient-to-b from-white via-[#f6faf9] to-[var(--sand)]/30"></div>
+      <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full blur-3xl opacity-40"
+        style="background: var(--mint);">
+      </div>
+      <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-40"
+        style="background: var(--sand);"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-12">
+      <div class="mx-auto max-w-2xl text-center">
+        <img src="logo.png" alt="Living Well Holistics" class="h-72 mx-auto" />
+
+        <h1 class="mt-6 text-4xl md:text-5xl font-bold leading-tight">
+          Listen to your body. <span class="text-[var(--ink-2)]">Choose with confidence.</span>
+        </h1>
+
+        <p class="mt-4 text-lg text-gray-700">
+          Living Well Holistics focuses on nutrition coaching, biofeedback practice, and holistic consulting.
+          We help mothers and families make simple, realistic wellness choices using gentle Muscle Response Testing,
+          non-diagnostic food sensitivity screening, and biofeedback.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#booking" class="btn btn-primary">Schedule a Session</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== Services ========== -->
+  <section id="services" class="section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="kicker">Services</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold">Simple tools to understand what your body needs</h2>
+        <p class="mt-3 text-gray-700">These services are educational and non-diagnostic. They help you make confident,
+          practical choices for daily life.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Muscle Testing -->
+        <article class="card p-6" id="muscle-testing">
+          <div class="text-sm font-semibold text-gray-700">Hands-on • Gentle</div>
+          <h3 class="mt-1 text-xl font-bold">Muscle Response Testing</h3>
+          <p class="mt-2 text-gray-700">Observe how your nervous system responds to specific stimuli to highlight where
+            support may help—nutrition, lifestyle, or stress patterns. Not a medical diagnosis or treatment.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Non-invasive assessment</li>
+            <li>Personalized recommendations</li>
+            <li>Kid friendly</li>
+          </ul>
+        </article>
+
+        <!-- Food Screening -->
+        <article class="card p-6" id="food-screening">
+          <div class="text-sm font-semibold text-gray-700">Nutrition • Family</div>
+          <h3 class="mt-1 text-xl font-bold">Food Sensitivity Screening (Non-Allergy)</h3>
+          <p class="mt-2 text-gray-700">Identify potential reactivity patterns to common foods. Use short-term avoidance
+            and guided reintroduction to calm stress while supporting gut health. Not an allergy test.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Highlights potential triggers</li>
+            <li>Supports simple family meal planning</li>
+            <li>Adjusts as the body changes</li>
+          </ul>
+        </article>
+
+        <!-- Biofeedback -->
+        <article class="card p-6" id="biofeedback">
+          <div class="text-sm font-semibold text-gray-700">Technology • Insights</div>
+          <h3 class="mt-1 text-xl font-bold">Biofeedback Scan (Zyto Balance)</h3>
+          <p class="mt-2 text-gray-700">A non-invasive scan that surfaces potential areas of energetic stress and
+            possible wellness supports. For education only; not diagnostic.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Quick, comfortable session</li>
+            <li>Clear visual report</li>
+            <li>Pairs well with muscle testing</li>
+          </ul>
+        </article>
+
+        <!-- Emotional Release -->
+        <article class="card p-6" id="emotional-release">
+          <div class="text-sm font-semibold text-gray-700">Faith • Gentle</div>
+          <h3 class="mt-1 text-xl font-bold">Faith-Based Emotional Release</h3>
+          <p class="mt-2 text-gray-700">A calm, prayerful process that helps the body let go of stored stress.
+            Complements, not replaces, professional care.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Support for mind–body connection</li>
+            <li>Trauma-aware and compassionate</li>
+            <li>Optional and client-led</li>
+          </ul>
+        </article>
+
+        <!-- Follow Ups -->
+        <article class="card p-6" id="follow-ups">
+          <div class="text-sm font-semibold text-gray-700">Clarity • Momentum</div>
+          <h3 class="mt-1 text-xl font-bold">Follow-Up Session</h3>
+          <p class="mt-2 text-gray-700">We review your progress, fine-tune recommendations, and keep your plan aligned
+            with what your body is showing now.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Program checks & adjustments</li>
+            <li>Nutrition & lifestyle coaching</li>
+            <li>Optional lab review (educational)</li>
+          </ul>
+        </article>
+
+        <!-- Add-ons -->
+        <article class="card p-6" id="add-ons">
+          <div class="text-sm font-semibold text-gray-700">Customize • Focus</div>
+          <h3 class="mt-1 text-xl font-bold">Helpful Add-Ons</h3>
+          <p class="mt-2 text-gray-700">Select focused checks or reports that give your body a stronger voice in the
+            process.</p>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700 list-disc pl-5">
+            <li>Targeted food category checks</li>
+            <li>Supplement program review</li>
+            <li>Simple habit roadmap</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-10">
+        <a href="#booking" class="btn btn-primary">Book Your First Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Approach (3 steps) ========== -->
+  <!-- <section id="approach" class="section bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="kicker">The Approach</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold">Gentle. Clear. Realistic for busy families.</h2>
+        <p class="mt-3 text-gray-700">No overwhelm, no guesswork—just the next right step you can actually do.</p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <div class="text-sm font-semibold text-gray-700">Step 1</div>
+          <h3 class="mt-1 font-bold text-xl">Listen</h3>
+          <p class="mt-2 text-gray-700">We gather your story and observe your body’s responses with gentle, non-invasive
+            methods.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm font-semibold text-gray-700">Step 2</div>
+          <h3 class="mt-1 font-bold text-xl">Translate</h3>
+          <p class="mt-2 text-gray-700">We connect the dots—food, stress, sleep, environment—into a simple plan of
+            support.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm font-semibold text-gray-700">Support</div>
+          <h3 class="mt-1 font-bold text-xl">Support</h3>
+          <p class="mt-2 text-gray-700">You leave with clear next steps that fit real life. We adjust as your body
+            changes.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ========== About ========== -->
+  <section id="about" class="section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="card p-6">
+          <img src="/janelle.jpg" alt="Janelle Bass, Living Well Holistics"
+            class="w-full h-72 object-cover rounded-xl" />
+        </div>
+        <div>
+          <!-- <p class="kicker">Meet Janelle</p> -->
+          <h2 class="mt-2 text-3xl md:text-4xl font-bold">Hi, I’m Janelle—your body’s translator</h2>
+          <p class="mt-3 text-gray-700">
+            With 12+ years serving families as a certified nutrition coach, biofeedback practitioner, and holistic
+            consultant, I help you move from confusion to clarity.
+            My focus is integrative and realistic—science-informed, faith-aligned, and family-friendly.
+          </p>
+          <ul class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <li class="card p-3">Certified Nutrition Coach</li>
+            <li class="card p-3">Biofeedback Practitioner</li>
+            <li class="card p-3">Holistic Consultant</li>
+            <li class="card p-3">Faith-informed Support</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <a href="#booking" class="btn btn-primary">Schedule a Session</a>
+            <a href="#contact" class="btn btn-outline">Questions? Let’s chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Social Proof ========== -->
+  <section class="section relative overflow-hidden">
+    <!-- Fixed background image layer @ 30% opacity -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+      <div class="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center bg-fixed opacity-30"></div>
+      <!-- Keep your existing gradient overlay for consistency -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white to-[var(--mint)]/20"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="kicker">Trusted by families in Central Florida</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold">What clients are saying</h2>
+        <p class="mt-3 text-gray-700">Real moms. Real life. Practical wins.</p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <blockquote class="card p-6 text-sm text-gray-800">
+          “I came to Janelle at Living Well Holistics due to a handful of health concerns. She took her time and really
+          made me
+          feel heard and understood during the appt. She really took her time to listen to my concerns and I left with
+          like a
+          weight being lifted off my shoulders. I was so pleased with what she recommended that I made an appt for my
+          children to
+          come and get seen by her. We had have great results and can not wait for us to have our follow-ups. I have
+          recommended a
+          handful of people to LWH. Thank you for all your love and support!!”
+          <div class="mt-3 text-gray-600">— Elizabeth H.</div>
+        </blockquote>
+        <blockquote class="card p-6 text-sm text-gray-800">
+          “I’d recommend LWH to anyone who is looking to understand what your body really needs with someone who really
+          cares and
+          listens. Janelle has knowledge and experience and is so kind and refreshing to be around. She is able to help
+          pinpoint
+          areas that need support to help the overall well-being of the person. My children had a great experience with
+          her as
+          well. Highly recommend!”
+          <div class="mt-3 text-gray-600">— Rachel B.</div>
+        </blockquote>
+        <blockquote class="card p-6 text-sm text-gray-800">
+          “I highly recommend Living Well Holistics for everyone in the family! If you have been searching for answers
+          for health
+          issues, this is your place! Janelle takes the time to listen to understand everything that you have been
+          through with
+          your health concerns. She truly wants to help you find the answers and see you well! I had psoriasis and
+          eczema for over
+          10 years that was resolved after one appointment where Janelle was able to pinpoint the problem. I eliminated
+          the
+          problem and I saw results right away! I could not believe how easy it was!”
+          <div class="mt-3 text-gray-600">— Tina M.</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="section bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="kicker">FAQ</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold">Common questions from moms</h2>
+        <p class="mt-3 text-gray-700">Short, clear answers you can trust.</p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Do you accept insurance?</summary>
+          <p class="mt-3 text-gray-700">
+            We provide education-based wellness services that are not billed to insurance. We’re unable to submit claims
+            and
+            reimbursement isn’t available. Many families use an HSA/FSA card for sessions. To keep costs sensible, we
+            keep
+            labs optional and recommend only a few targeted supports at a time.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Do you offer virtual sessions?</summary>
+          <p class="mt-3 text-gray-700">
+            Yes. Select services are available virtually via Zoom or phone for education and coaching. Hands-on services
+            (like
+            muscle testing) are offered in person.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Who do you work with?</summary>
+          <p class="mt-3 text-gray-700">
+            Mostly moms and families looking for gentle, realistic steps. Common goals include energy, digestion, skin,
+            sleep,
+            focus, and stress resilience. Our lens is simple: reduce burdens, support basics, and listen to what your
+            body is
+            showing—without making medical claims.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Do you prescribe medications?</summary>
+          <p class="mt-3 text-gray-700">
+            No. We do not diagnose conditions or prescribe pharmaceuticals. Our recommendations tend to be nutrition,
+            lifestyle, and select nutraceuticals or gentle practices. Please consult your licensed provider for medical
+            concerns and prescriptions.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Are your plans “one size fits all”?</summary>
+          <p class="mt-3 text-gray-700">
+            No. Each plan is tailored. We move in phases, address priorities in the order your body shows, and keep
+            action
+            steps doable for busy family life.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">What products do you use or recommend?</summary>
+          <p class="mt-3 text-gray-700">
+            We keep supplements minimal and intentional, focusing on quality brands that fit your needs and budget. We
+            do not
+            require purchases and we’re happy to review what you already have (education-only).
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Do you see children? What about pregnancy or breastfeeding?
+          </summary>
+          <p class="mt-3 text-gray-700">
+            Yes—many families bring their children. For pregnancy or breastfeeding, we focus on gentle lifestyle support
+            and
+            education; we avoid introducing new supplements unless your licensed provider approves. As always, please
+            follow
+            your provider’s guidance.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">I’m very sensitive—can you still help?</summary>
+          <p class="mt-3 text-gray-700">
+            We regularly work with highly sensitive clients. We start small, reduce stressors, and pace changes so your
+            system
+            stays as calm as possible. Your comfort sets the speed.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">What does “open drainage & detox pathways” mean?</summary>
+          <p class="mt-3 text-gray-700">
+            Before adding supports, we make sure basics are moving well—bowel regularity, gentle hydration, lymph
+            movement,
+            and everyday habits that help your body process life’s load. This often reduces “push too hard, feel worse”
+            reactions.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">Do you review lab work?</summary>
+          <p class="mt-3 text-gray-700">
+            We don’t order or interpret labs medically. If you bring recent labs from your provider, we can review them
+            for
+            education and to help you ask good questions at your next appointment.
+          </p>
+        </details>
+
+        <details class="card p-5">
+          <summary class="font-semibold cursor-pointer">I’ve tried so many things—should I still have hope?</summary>
+          <p class="mt-3 text-gray-700">
+            Yes. We take a gentle, step-by-step approach that reduces overwhelm and focuses on what your body is
+            actually
+            showing today. Our aim is clarity and confidence, not perfection. You are not alone.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section id="booking" class="section relative overflow-hidden">
+    <!-- Fixed background image layer @ 30% opacity -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+      <div class="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center bg-fixed opacity-30"></div>
+    </div>
+
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Ready to get clarity—without the overwhelm?</h2>
+      <p class="mt-3 text-gray-700 max-w-2xl mx-auto">
+        Book your first session and discover what your body is asking for.
+        We’ll keep it simple and family-friendly.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/schedule" class="btn btn-primary">Schedule Now</a>
+        <a href="#contact" class="btn btn-outline">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== Contact ========== -->
+  <section id="contact" class="section bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2 class="mt-2 text-3xl md:text-4xl font-bold">We’re here to help</h2>
+          <p class="mt-3 text-gray-700">Proudly serving Oviedo, Orlando, Sanford, Winter Springs, and families across
+            Central
+            Florida.</p>
+          <div class="mt-6 space-y-3 text-gray-700">
+            <p><strong>Email:</strong> hello@livingwellwithjanelle.com</p>
+            <p><strong>Phone:</strong> (555) 555-5555</p>
+            <p><strong>Hours:</strong> By appointment</p>
+          </div>
+        </div>
+        <form class="card p-6 grid gap-4" action="/api/contact" method="post">
+          <div>
+            <label class="block text-sm font-medium">Name</label>
+            <input name="name" required class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Email</label>
+            <input name="email" type="email" required class="mt-1 w-full rounded-xl border px-3 py-2"
+              placeholder="you@email.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">How can we help?</label>
+            <textarea name="message" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2"
+              placeholder="Share a bit about your goals"></textarea>
+          </div>
+          <button class="btn btn-primary w-full" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="border-t">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="/logo.png" alt="Living Well Holistics" class="h-32 w-32 rounded-full" />
+            <span class="font-semibold">Living Well Holistics</span>
+          </div>
+          <p class="mt-3 text-sm text-gray-600">
+            Education-forward, family-focused wellness support. We do not diagnose, treat, or cure disease. Please
+            consult your licensed provider for medical concerns.
+          </p>
+        </div>
+        <nav class="text-sm">
+          <div class="font-semibold">Explore</div>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#services" class="hover:opacity-80">Services</a></li>
+            <li><a href="/blog" class="hover:opacity-80">Blog</a></li>
+            <li><a href="#faq" class="hover:opacity-80">FAQ</a></li>
+            <li><a href="/shop" class="hover:opacity-80">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="text-sm">
+          <div class="font-semibold">Service Area</div>
+          <p class="mt-2 text-gray-600">Oviedo • Winter Springs • Orlando • Sanford • Gemini Springs • Deltona • Lake
+            Mary • Longwood • Heathrow • Central Florida</p>
+          <p class="mt-3 text-gray-600">© <span id="year"></span> Living Well Holistics. All rights reserved. <br>Web
+            Design and SEO by <a href="https://bastiontech.org">BastionTech</a>. </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== Small JS ========== -->
+  <script>
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      const mm = document.getElementById('mobileMenu');
+      if (!mm) return;
+      mm.classList.toggle('hidden');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
